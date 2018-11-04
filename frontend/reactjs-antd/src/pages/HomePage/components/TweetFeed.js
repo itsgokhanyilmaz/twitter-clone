@@ -49,7 +49,7 @@ class TweetFeed extends React.Component {
                         actions={[<IconText type="star-o" text="19" />, <IconText type="like-o" text="05" />, <IconText type="message" text="2" />]}
                     >
                         <List.Item.Meta
-                            title={'@' + tweet.username}
+                            title={'@' + tweet.user_id}
                             description={tweet.username}
                         />
                         {tweet.content}
