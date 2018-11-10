@@ -1,12 +1,8 @@
 {
-  "name": "react-antd-router-boilerplate",
+  "name": "Twitter-Clone",
   "version": "1.0.0",
   "description": "Boilerplate for react projects with ant design and react router",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/semcelik/react-antd-router-boilerplate.git"
-  },
   "scripts": {
     "precommit": "pretty-quick --staged",
     "start": "webpack-dev-server --mode development --open",
@@ -15,7 +11,7 @@
   "keywords": [
     "react"
   ],
-  "author": "semcelik",
+  "author": "gokhany",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",

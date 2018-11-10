@@ -11,7 +11,7 @@ class Tweet(models.Model):
 
     user_id = models.ForeignKey('User', on_delete=models.CASCADE)
     content = models.CharField(max_length=140)
-
+    username = models.CharField(max_length=30)
     create_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

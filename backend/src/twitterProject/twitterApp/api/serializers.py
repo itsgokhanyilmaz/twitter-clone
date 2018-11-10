@@ -9,13 +9,12 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = '__all__'
 
-
 class TweetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tweet
         fields = (
-            'id', 'user_id', 'content', 'create_date',
+            'id', 'user_id', 'content', 'create_date', 'username',
         )
 
-
+        # read_only_fields = ('account_name', )

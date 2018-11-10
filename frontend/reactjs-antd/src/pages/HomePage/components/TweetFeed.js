@@ -19,11 +19,15 @@ class TweetFeed extends React.Component {
     }
 
     componentDidMount(){
-        axios.get('http://127.0.0.1:8000/api/tweets/')
-            .then(res => {
+        axios.get('http://127.0.0.1:8000/api/tweets/',{
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        })
+        .then(res => {
                 const tweets = res.data;
                 this.setState({
-                    tweets
+                    tweets:tweets
                 });
             })
     }
@@ -49,8 +53,8 @@ class TweetFeed extends React.Component {
                         actions={[<IconText type="star-o" text="19" />, <IconText type="like-o" text="05" />, <IconText type="message" text="2" />]}
                     >
                         <List.Item.Meta
-                            title={'@' + tweet.user_id}
-                            description={tweet.username}
+                            title={'@' + tweet.username}
+                            description={tweet.email}
                         />
                         {tweet.content}
                     </List.Item>
